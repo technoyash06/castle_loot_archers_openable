@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castle Loot Archers 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="shell">
+    <div id="topbar">
+      <div>
+        <strong>Castle Loot Archers 3D</strong>
+        <span class="tag">Original low-poly castle loot archer game</span>
+      </div>
+      <div id="scoreText">Blue 0 : 0 Red</div>
+    </div>
+
+    <div id="gameWrap">
+      <div id="threeMount"></div>
+
+      <div id="startOverlay">
+        <div class="startCard">
+          <h1>Castle Loot Archers 3D</h1>
+          <p>First-person 3D castle arena with bows, melee, shields, armor, enchanting, elytra, loot chests, Minecraft-style inventory, building blocks, villages, villager trading, Nether, End, and Aether-inspired dimensions, and poosting-style movement abilities.</p>
+          <button id="playBtn">Click to Play 3D</button>
+          <small>Mouse locks for 3D aim. Use WASD or Arrow Keys to move. Press Esc to release mouse.</small>
+        </div>
+      </div>
+
+      <div id="crosshair">+</div>
+
+      <div id="hud">
+        <div class="bars">
+          <div class="barLabel">HP <span id="hpText">100/100</span></div>
+          <div class="bar"><div id="hpBar"></div></div>
+          <div class="barLabel">Shield <span id="shieldText">50/50</span></div>
+          <div class="bar shield"><div id="shieldBar"></div></div>
+          <div class="barLabel">Armor <span id="armorText">0%</span></div>
+          <div class="bar armor"><div id="armorBar"></div></div>
+          <div class="barLabel">XP <span id="xpText">0/100</span></div>
+          <div class="bar xp"><div id="xpBar"></div></div>
+        </div>
+        <div class="levelBox">Level <span id="levelText">1</span><br><small>Upgrade pts: <span id="upgradeText">0</span></small></div>
+        <div class="abilityBox">Poost <span id="poostText">Ready</span><br><small>Elytra <span id="elytraText">Off</span></small></div>
+      </div>
+
+      <div id="lookTip">Click game to lock mouse · Q poost · Space jump / creative fly up</div>
+      <div id="messages"></div>
+      <div id="hotbar"></div>
+
+      <div id="inventoryPanel" class="hidden panel">
+        <div class="panelHeader">
+          <h2>Inventory + Armor</h2>
+          <span>Use 1-9 hotbar. Click armor/shield/elytra to equip.</span>
+        </div>
+        <div id="creativeInventory" class="creativeBox hidden">
+          <div class="creativeHeader">
+            <h3>Creative Items</h3>
+            <span>Click any item to add it to your inventory.</span>
+          </div>
+          <div id="creativeItems" class="slots creativeSlots"></div>
+        </div>
+        <div class="inventorySections">
+          <div>
+            <h3>Hotbar</h3>
+            <div id="invHotbar" class="slots"></div>
+            <h3>Equipped Gear</h3>
+            <div id="equipment" class="equipmentGrid"></div>
+          </div>
+          <div>
+            <h3>Backpack</h3>
+            <div id="backpack" class="slots backpack"></div>
+          </div>
+          <div class="statsBox">
+            <h3>Character Upgrades</h3>
+            <p><b>H</b> Max Health +20</p>
+            <p><b>J</b> Shield +15</p>
+            <p><b>K</b> Attack Damage +10%</p>
+            <p><b>L</b> Move Speed +5%</p>
+            <p><b>C</b> Enchant selected gear using XP + lapis</p>
+            <p><b>Q</b> Poost with light/heavy poke weapons</p>
+            <p class="small">Armor reduces damage. Elytra lets you glide while falling by holding Space. Creative mode flies with Space up and Shift down. Chests can contain rare armor, arrows, bows, melee weapons, lapis, and blocks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="enchantPanel" class="hidden panel miniPanel">
+        <div class="panelHeader">
+          <h2>Enchanting Table</h2>
+          <span>Minecraft-inspired enchanting, original rules.</span>
+        </div>
+        <p id="enchantTarget">Select a weapon, bow, shield, armor item, or elytra.</p>
+        <div id="enchantOptions"></div>
+        <p class="small">Costs XP and lapis. Higher level = stronger enchantments. Enchants affect damage, protection, poosting, gliding, and durability.</p>
+      </div>
+
+      <div id="shulkerPanel" class="hidden panel miniPanel">
+        <div class="panelHeader">
+          <h2 id="shulkerTitle">Shulker Box</h2>
+          <span>Click inventory items to store them. Click shulker items to take them out.</span>
+        </div>
+        <div id="shulkerSlots" class="slots shulkerSlots"></div>
+        <p class="small">Press F near the placed shulker box to open it again.</p>
+      </div>
+
+      <div id="craftingPanel" class="hidden panel miniPanel">
+        <div class="panelHeader">
+          <h2>Crafting Table</h2>
+          <span>Spend items from your inventory to craft blocks and tools.</span>
+        </div>
+        <div id="craftingRecipes" class="recipeList"></div>
+      </div>
+
+      <div id="furnacePanel" class="hidden panel miniPanel">
+        <div class="panelHeader">
+          <h2>Furnace</h2>
+          <span>Smelt raw blocks into stronger materials.</span>
+        </div>
+        <div id="furnaceRecipes" class="recipeList"></div>
+      </div>
+
+      <div id="tradePanel" class="hidden panel miniPanel">
+        <div class="panelHeader">
+          <h2 id="tradeTitle">Villager Trading</h2>
+          <span>Trade items from your inventory.</span>
+        </div>
+        <div id="tradeOptions" class="recipeList"></div>
+      </div>
+
+      <div id="helpPanel">
+        <b>Controls:</b>
+        WASD or Arrow Keys move (A/← left, D/→ right) · Mouse aim · Space jump / creative fly up / hold with Elytra to glide · Shift creative fly down or block in survival · Left click use item · Q poost · 1-9 hotbar · I inventory · C enchant · F pick up/open chest/mine/use stations/trade · E secret passage / dimension portal · G drop selected · H/J/K/L upgrades · R restart
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
