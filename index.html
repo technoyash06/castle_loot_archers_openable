@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Castle Loot Archers 3D</title>
+  <title>Castle Loot Archers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div id="shell">
     <div id="topbar">
@@ -22,7 +24,9 @@
       <div id="startOverlay">
         <div class="startCard">
           <h1>Castle Loot Archers 3D</h1>
-          <p>First-person 3D castle arena with bows, melee, shields, armor, enchanting, elytra, loot chests, Minecraft-style inventory, building blocks, villages, villager trading, Nether, End, and Aether-inspired dimensions, and poosting-style movement abilities.</p>
+          <p>First-person 3D castle arena with bows, melee, shields, armor, enchanting, elytra, loot chests,
+            Minecraft-style inventory, building blocks, villages, villager trading, Nether, End, and Aether-inspired
+            dimensions, and poosting-style movement abilities.</p>
           <button id="playBtn">Click to Play 3D</button>
           <small>Mouse locks for 3D aim. Use WASD or Arrow Keys to move. Press Esc to release mouse.</small>
         </div>
@@ -33,16 +37,26 @@
       <div id="hud">
         <div class="bars">
           <div class="barLabel">HP <span id="hpText">100/100</span></div>
-          <div class="bar"><div id="hpBar"></div></div>
+          <div class="bar">
+            <div id="hpBar"></div>
+          </div>
           <div class="barLabel">Shield <span id="shieldText">50/50</span></div>
-          <div class="bar shield"><div id="shieldBar"></div></div>
+          <div class="bar shield">
+            <div id="shieldBar"></div>
+          </div>
           <div class="barLabel">Armor <span id="armorText">0%</span></div>
-          <div class="bar armor"><div id="armorBar"></div></div>
+          <div class="bar armor">
+            <div id="armorBar"></div>
+          </div>
           <div class="barLabel">XP <span id="xpText">0/100</span></div>
-          <div class="bar xp"><div id="xpBar"></div></div>
+          <div class="bar xp">
+            <div id="xpBar"></div>
+          </div>
         </div>
-        <div class="levelBox">Level <span id="levelText">1</span><br><small>Upgrade pts: <span id="upgradeText">0</span></small></div>
-        <div class="abilityBox">Poost <span id="poostText">Ready</span><br><small>Elytra <span id="elytraText">Off</span></small></div>
+        <div class="levelBox">Level <span id="levelText">1</span><br><small>Upgrade pts: <span
+              id="upgradeText">0</span></small></div>
+        <div class="abilityBox">Poost <span id="poostText">Ready</span><br><small>Elytra <span
+              id="elytraText">Off</span></small></div>
       </div>
 
       <div id="lookTip">Click game to lock mouse · Q poost · Space jump / creative fly up</div>
@@ -80,7 +94,9 @@
             <p><b>L</b> Move Speed +5%</p>
             <p><b>C</b> Enchant selected gear using XP + lapis</p>
             <p><b>Q</b> Poost with light/heavy poke weapons</p>
-            <p class="small">Armor reduces damage. Elytra lets you glide while falling by holding Space. Creative mode flies with Space up and Shift down. Chests can contain rare armor, arrows, bows, melee weapons, lapis, and blocks.</p>
+            <p class="small">Armor reduces damage. Elytra lets you glide while falling by holding Space. Creative mode
+              flies with Space up and Shift down. Chests can contain rare armor, arrows, bows, melee weapons, lapis, and
+              blocks.</p>
           </div>
         </div>
       </div>
@@ -92,7 +108,8 @@
         </div>
         <p id="enchantTarget">Select a weapon, bow, shield, armor item, or elytra.</p>
         <div id="enchantOptions"></div>
-        <p class="small">Costs XP and lapis. Higher level = stronger enchantments. Enchants affect damage, protection, poosting, gliding, and durability.</p>
+        <p class="small">Costs XP and lapis. Higher level = stronger enchantments. Enchants affect damage, protection,
+          poosting, gliding, and durability.</p>
       </div>
 
       <div id="shulkerPanel" class="hidden panel miniPanel">
@@ -130,7 +147,10 @@
 
       <div id="helpPanel">
         <b>Controls:</b>
-        WASD or Arrow Keys move (A/← left, D/→ right) · Mouse aim · Space jump / creative fly up / hold with Elytra to glide · Shift creative fly down or block in survival · Left click use item · Q poost · 1-9 hotbar · I inventory · C enchant · F pick up/open chest/mine/use stations/trade · E secret passage / dimension portal · G drop selected · H/J/K/L upgrades · R restart
+        WASD or Arrow Keys move (A/← left, D/→ right) · Mouse aim · Space jump / creative fly up / hold with Elytra to
+        glide · Shift creative fly down or block in survival · Left click use item · Q poost · 1-9 hotbar · I inventory
+        · C enchant · F pick up/open chest/mine/use stations/trade · E secret passage / dimension portal · G drop
+        selected · H/J/K/L upgrades · R restart
       </div>
     </div>
   </div>
@@ -138,4 +158,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
   <script src="game.js"></script>
 </body>
+
 </html>
